@@ -25,7 +25,6 @@ public class Retrofit {
     public interface GitApiService {
         @GET
         Call<GithubUserResponse> getGitResponse(@Url String myUrl);
-
-
     }
+
 }
