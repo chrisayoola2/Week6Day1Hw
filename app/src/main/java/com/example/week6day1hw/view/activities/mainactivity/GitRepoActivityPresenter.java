@@ -17,12 +17,12 @@ public class GitRepoActivityPresenter  {
         this.gitRepoActivityContract = gitRepoActivityContract;
     }
 
-    public void getRepoinfo(Context context) {
+    public void getRepoinfo(Context context) {// This is wrong
         Retrofit retrofitRepo = new Retrofit();
-        retrofitRepo.getService().getGitResponse("https://api.github.com/users/chrisayoola2/repos").enqueue(new Callback<GithubUserResponse>() {
+        retrofitRepo.getService().getGitResponse("https://api.github.com/users/chrisayoola2/repos").enqueue(new Callback<GithubRepoResponse>() {
             @Override
             public void onResponse(Call<GithubUserResponse> call, Response<GithubUserResponse> response) {
-                
+
             }
 
             @Override
